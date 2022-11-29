@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/index.css">
+  <title>Final Parallel Project</title>
+</head>
+<body>
+  
+  <div>
+    <h1>Welcome to <span>GinGun</span> Restaurant</h1>
+  </div>
+  <h2>Here's is the available food for you!</h2>
+  
+  <table>
+
+    <th>
+      <tr>
+        <td>
+          <span class="thead">Name</span>
+        </td>
+        <td>Category</td>
+      </tr>
+    </th>
+
+    {% for food in foodlist %}
+    
+    <tr>
+      <td>
+        {{ food['name'] }}
+      </td>
+      <td>
+        {{ food['category'] }}
+      </td>
+    </tr>
+
+    {% endfor %}
+  </table>
+  
+
+</body>
+</html>
